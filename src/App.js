@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Login from "./Login";
 
 function App() {
   return (
@@ -8,9 +9,17 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <main>this is main content</main>
+      <main>
+        <Login />
+      </main>
       <footer>
-        🌵 <span>Created by Aurimas Darguzis</span> 🌵{" "}
+        <span role="img" aria-label="cactus">
+          🌵
+        </span>
+        <span className="footer-text">Created by Aurimas Darguzis</span>
+        <span role="img" aria-label="cactus">
+          🌵
+        </span>
       </footer>
     </div>
   );
