@@ -1,5 +1,8 @@
 .App {
-  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .App-header {
@@ -14,16 +17,18 @@
 .App-header img {
   width: 50%;
   padding-top: 32px;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  -ms-user-drag: none;
-  user-drag: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  margin: 0 auto;
+  padding-bottom: 8px;
+}
+
+footer span {
+  opacity: 0.7;
 }

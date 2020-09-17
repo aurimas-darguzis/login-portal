@@ -8,6 +8,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
+      <main>this is main content</main>
+      <footer>
+        🌵 <span>Created by Aurimas Darguzis</span> 🌵{" "}
+      </footer>
     </div>
   );
 }

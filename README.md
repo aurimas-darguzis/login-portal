@@ -1,6 +1,7 @@
 # Login Portal
 
-A user login portal with two-factor authentication. Mobile-friendly, supports IE11.
+A user login portal with two-factor authentication. Mobile-friendly, supports IE11.<br />
+Visit site https://login-portal.netlify.app/
 
 ## Available Scripts
 
