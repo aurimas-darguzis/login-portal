@@ -1,13 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import "./Login.css";
 
-export default function Login() {
-  const { register, handleSubmit, errors, formState } = useForm({
-    mode: "onTouched",
-  });
-  const onSubmit = (data) => {
-    console.log("LOGIN ", data);
+export default function Step1({ history }) {
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = () => {
+    history.push("/step-2");
   };
   return (
     <>
@@ -55,7 +52,6 @@ export default function Login() {
             Please enter correct date
           </span>
         )}
-
         <label htmlFor="postcode">Postcode</label>
         <input
           placeholder="Your post code "
@@ -64,7 +60,6 @@ export default function Login() {
           aria-invalid={errors.lastName ? "true" : "false"}
           ref={register({ required: true, minLength: 5, maxLength: 7 })}
         />
-
         {errors.postcode?.type === "required" && (
           <span role="alert" className="error-message">
             Post code is required
@@ -80,8 +75,7 @@ export default function Login() {
             Maximum character length exceeded
           </span>
         )}
-
-        <input disabled={!formState.isValid} type="submit" />
+        <input type="submit" />
       </form>
     </>
   );
