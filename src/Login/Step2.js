@@ -6,7 +6,7 @@ export default function Step2({ history }) {
     history.push("/step-3");
   }
   return (
-    <div className="step-2-container">
+    <div className="login-container">
       <header className="text-center">
         <h4>2-step verification</h4>
         <p>
@@ -23,7 +23,10 @@ export default function Step2({ history }) {
           checked={contact === "phone"}
           onChange={() => setContact(true)}
         />
-        <label htmlFor="mobile-phone">Mobile Phone (+44 **** ***208)</label>
+        <label htmlFor="mobile-phone">
+          Mobile Phone{" "}
+          <span className="contact-suggestion">(+44 **** ***208)</span>
+        </label>
       </div>
 
       <div
@@ -38,7 +41,9 @@ export default function Step2({ history }) {
           checked={contact === "landline"}
           onChange={() => setContact(true)}
         />
-        <label htmlFor="landline">Landline (01** *** *567)</label>
+        <label htmlFor="landline">
+          Landline <span className="contact-suggestion">(01** *** *567)</span>
+        </label>
       </div>
       <div className="verification-option" onClick={() => setContact("email")}>
         <input
@@ -49,7 +54,12 @@ export default function Step2({ history }) {
           checked={contact === "email"}
           onChange={() => setContact(true)}
         />
-        <label htmlFor="email">Email (a*****sd*r*****@drdoctor.com</label>
+        <label htmlFor="email">
+          Email
+          <span className="contact-suggestion">
+            (a*****sd*r*****@drdoctor.com
+          </span>
+        </label>
       </div>
       <div className="verification-submit">
         <button disabled={!contact} onClick={goToStep}>

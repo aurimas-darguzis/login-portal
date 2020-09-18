@@ -1,14 +1,14 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-export default function Step1({ history }) {
+export default function LoginForm({ history }) {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = () => {
     history.push("/step-2");
   };
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="login-form-container">
+      <form onSubmit={handleSubmit(onSubmit)} className="login-container">
         <h1 className="text-center">Please login</h1>
         <label htmlFor="lastName">Last name</label>
         <input
@@ -78,4 +78,3 @@ export default function Step1({ history }) {
     </>
   );
 }
-// <input disabled={!formState.isValid} type="submit" />
