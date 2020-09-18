@@ -13,7 +13,7 @@ export default function Step3({ history }) {
   }
   return (
     <div className="text-center">
-      <h4>Please enter on-time code</h4>
+      <h4>Please enter one-time code</h4>
       <input
         type="text"
         className="one-time-code"

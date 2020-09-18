@@ -9,7 +9,7 @@ export default function LoginForm({ history }) {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} className="login-container">
-        <h1 className="text-center">Please login</h1>
+        <h1 className="text-center">Please sign in to your account</h1>
         <label htmlFor="lastName">Last name</label>
         <input
           type="text"
