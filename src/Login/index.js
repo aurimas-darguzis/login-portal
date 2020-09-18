@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import Home from "../Home";
 import "./Login.css";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
@@ -11,6 +12,16 @@ export default function Login() {
       <Route exact path="/" component={Step1} />
       <Route path="/step-2" component={Step2} />
       <Route path="/step-3" component={Step3} />
+      <Route path="/home" component={Home} />
+      <Route
+        render={() => (
+          <Redirect
+            to={{
+              pathname: "/",
+            }}
+          />
+        )}
+      />
     </Router>
   );
 }

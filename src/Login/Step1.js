@@ -9,9 +9,9 @@ export default function Step1({ history }) {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} className="login-form-container">
+        <h1 className="text-center">Please login</h1>
         <label htmlFor="lastName">Last name</label>
         <input
-          placeholder="Your last name"
           type="text"
           id="lastName"
           name="lastName"
@@ -29,9 +29,8 @@ export default function Step1({ history }) {
             Maximum limit of characters exceeded
           </span>
         )}
-        <label htmlFor="dateOfBirth">Date of birth (DD-MM-YYYY)</label>
+        <label htmlFor="dateOfBirth">Date of birth (DD/MM/YYYY)</label>
         <input
-          placeholder="Your date of birth (DD-MM-YYYY)"
           type="text"
           name="dateOfBirth"
           aria-invalid={errors.dateOfBirth ? "true" : "false"}
@@ -54,7 +53,6 @@ export default function Step1({ history }) {
         )}
         <label htmlFor="postcode">Postcode</label>
         <input
-          placeholder="Your post code "
           name="postcode"
           type="text"
           aria-invalid={errors.lastName ? "true" : "false"}
@@ -75,8 +73,9 @@ export default function Step1({ history }) {
             Maximum character length exceeded
           </span>
         )}
-        <input type="submit" />
+        <button type="submit">Login</button>
       </form>
     </>
   );
 }
+// <input disabled={!formState.isValid} type="submit" />
