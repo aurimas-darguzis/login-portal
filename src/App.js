@@ -2,9 +2,9 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import Step2 from "./Step2";
-import Step3 from "./Step3";
-import Home from "../Home";
+import Step2 from "./Login/Step2";
+import Step3 from "./Login/Step3";
+import Home from "./Home";
 import Login from "./Login";
 
 function App() {
