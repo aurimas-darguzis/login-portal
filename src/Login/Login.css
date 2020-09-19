@@ -24,7 +24,11 @@ input[type="text"] {
   margin-bottom: 22px;
   outline: none;
   border: 1px solid #107432;
-  border-radius: 5px;
+  border-radius: 0.5em;
+}
+
+input[type="text"]:focus {
+  border-width: 2px;
 }
 
 input[type="radio"] {
@@ -33,7 +37,7 @@ input[type="radio"] {
 
 .verification-option {
   border: 1px solid #107432;
-  border-radius: 5px;
+  border-radius: 0.5em;
   padding: 24px;
   margin-bottom: 16px;
   cursor: pointer;
@@ -53,6 +57,10 @@ input[type="radio"] {
   text-align: center;
 }
 
+.contact-suggestion {
+  margin-left: 8px;
+}
+
 .error-message {
   color: red;
   font-size: 0.8em;
@@ -68,9 +76,13 @@ button {
   font-size: 20px;
   padding: 5px 10px;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 0.5em;
   outline: none;
   margin: 0 auto;
+}
+
+button:focus {
+  background: #305f3d;
 }
 
 button:disabled,

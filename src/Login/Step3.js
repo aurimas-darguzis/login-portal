@@ -12,25 +12,34 @@ export default function Step3({ history }) {
     }
   }
   return (
-    <div className="text-center">
-      <h4>Please enter one-time code</h4>
+    <div role="form" className="text-center">
+      <h4 id="enter-code">Please enter one-time code</h4>
       <input
         type="text"
         className="one-time-code"
         maxLength={4}
         value={code}
+        autoFocus
+        aria-required="true"
+        aria-labelledby="enter-code"
         onChange={(e) => {
           setError(false);
           setCode(e.target.value);
         }}
       />
       {error ? (
-        <div className="error-message ">The code is incorrect</div>
+        <div
+          aria-labelledby="enter-code"
+          role="alert"
+          className="error-message"
+        >
+          The code is incorrect
+        </div>
       ) : (
         <></>
       )}
       <div className="verification-submit">
-        <button disabled={!code} onClick={verifyCode}>
+        <button aria-label="verify" disabled={!code} onClick={verifyCode}>
           Verify
         </button>
       </div>

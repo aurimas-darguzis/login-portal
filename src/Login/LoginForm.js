@@ -15,17 +15,27 @@ export default function LoginForm({ history }) {
           type="text"
           id="lastName"
           name="lastName"
+          autoFocus
+          aria-required="true"
           aria-labelledby="lastName"
           aria-invalid={errors.lastName ? "true" : "false"} // screen reader will say: "Lastname, edit, invalid entry. This is required"
           ref={register({ required: true, maxLength: 50 })}
         />
         {errors.lastName?.type === "required" && (
-          <span role="alert" className="error-message">
+          <span
+            aria-labelledby="lastName"
+            role="alert"
+            className="error-message"
+          >
             Last name is required
           </span>
         )}
         {errors.lastName?.type === "maxLength" && (
-          <span role="alert" className="error-message">
+          <span
+            aria-labelledby="lastName"
+            role="alert"
+            className="error-message"
+          >
             Maximum limit of characters exceeded
           </span>
         )}
@@ -33,6 +43,8 @@ export default function LoginForm({ history }) {
         <input
           type="text"
           name="dateOfBirth"
+          aria-required="true"
+          aria-labelledby="dateOfBirth"
           aria-invalid={errors.dateOfBirth ? "true" : "false"}
           ref={register({
             required: true,
@@ -42,38 +54,63 @@ export default function LoginForm({ history }) {
           })}
         />
         {errors.dateOfBirth?.type === "required" && (
-          <span role="alert" className="error-message">
+          <span
+            aria-labelledby="dateOfBirth"
+            role="alert"
+            className="error-message"
+          >
             Date of birth is required
           </span>
         )}
         {errors.dateOfBirth?.type === "pattern" && (
-          <span role="alert" className="error-message">
+          <span
+            aria-labelledby="dateOfBirth"
+            role="alert"
+            className="error-message"
+          >
             Please enter correct date
           </span>
         )}
         <label htmlFor="postcode">Postcode</label>
+
         <input
           name="postcode"
           type="text"
+          aria-required="true"
+          aria-labelledby="postcode"
           aria-invalid={errors.lastName ? "true" : "false"}
           ref={register({ required: true, minLength: 5, maxLength: 7 })}
         />
         {errors.postcode?.type === "required" && (
-          <span role="alert" className="error-message">
+          <span
+            aria-labelledby="postcode"
+            role="alert"
+            className="error-message"
+          >
             Post code is required
           </span>
         )}
         {errors.postcode?.type === "minLength" && (
-          <span role="alert" className="error-message">
+          <span
+            aria-labelledby="postcode"
+            role="alert"
+            className="error-message"
+          >
             Minimum 5 characters
           </span>
         )}
         {errors.postcode?.type === "maxLength" && (
-          <span role="alert" className="error-message">
+          <span
+            aria-labelledby="postcode"
+            role="alert"
+            className="error-message"
+          >
             Maximum character length exceeded
           </span>
         )}
-        <button type="submit">Login</button>
+        <button aria-label="login" type="submit">
+          Login
+        </button>
       </form>
     </>
   );
