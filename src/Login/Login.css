@@ -135,6 +135,10 @@ header p {
 }
 
 @media only screen and (max-width: 425px) {
+  main {
+    display: initial;
+  }
+
   .login-container {
     padding-left: 16px;
     padding-right: 16px;
