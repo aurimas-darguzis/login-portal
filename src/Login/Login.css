@@ -1,8 +1,17 @@
 .login-container {
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  width: 20%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   flex-direction: column;
   max-width: 420px;
-  flex: 1;
 }
 
 .login-container label {
@@ -54,6 +63,10 @@ input[type="radio"] {
 
 .verification-submit {
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 .one-time-code {
@@ -113,6 +126,10 @@ header p {
 
 .date-widget {
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 .date-widget label {
@@ -125,6 +142,10 @@ header p {
 
 .user-input-block {
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   flex-direction: column;
   margin-right: 32px;
   width: 16%;
