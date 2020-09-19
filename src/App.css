@@ -21,12 +21,6 @@
 main {
   display: flex;
   justify-content: center;
-
-  /* I personally think app looks better if this container 
-  is placed 120px up from its original position.
-  */
-  /* position: relative;
-  bottom: 120px; */
 }
 
 footer {
