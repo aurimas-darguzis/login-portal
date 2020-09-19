@@ -18,10 +18,14 @@ form h1 {
   margin-bottom: 1.5em;
 }
 
+label {
+  font-weight: 700;
+}
+
 input[type="text"] {
   font-size: 1.2em;
   padding: 16px;
-  margin-bottom: 22px;
+  margin-bottom: 32px;
   outline: none;
   border: 1px solid #107432;
   border-radius: 0.5em;
@@ -65,7 +69,7 @@ input[type="radio"] {
   color: red;
   font-size: 0.8em;
   position: relative;
-  bottom: 12px;
+  bottom: 26px;
 }
 
 button {
@@ -105,6 +109,29 @@ header p {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.date-widget {
+  display: flex;
+}
+
+.date-widget label {
+  font-weight: 500;
+}
+
+.date-widget input {
+  text-align: center;
+}
+
+.user-input-block {
+  display: flex;
+  flex-direction: column;
+  margin-right: 32px;
+  width: 16%;
+}
+
+.user-input-block:nth-child(3) {
+  width: 24%;
 }
 
 @media only screen and (max-width: 425px) {
