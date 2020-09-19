@@ -76,6 +76,7 @@ export default function LoginForm({ history }) {
         <input
           name="postcode"
           type="text"
+          className="uppercase"
           aria-required="true"
           aria-labelledby="postcode"
           aria-invalid={errors.lastName ? "true" : "false"}

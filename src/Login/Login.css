@@ -103,6 +103,10 @@ header p {
   text-align: center;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 425px) {
   .login-container {
     padding-left: 16px;
