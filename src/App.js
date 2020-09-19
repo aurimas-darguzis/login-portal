@@ -9,16 +9,16 @@ import Login from "./Login";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className='App'>
+      <header className='App-header'>
+        <img src={logo} className='App-logo' alt='logo' />
       </header>
       <main>
         <Router>
-          <Route exact path="/" component={Login} />
-          <Route path="/step-2" component={Step2} />
-          <Route path="/step-3" component={Step3} />
-          <Route path="/home" component={Home} />
+          <Route exact path='/' component={Login} />
+          <Route path='/step-2' component={Step2} />
+          <Route path='/step-3' component={Step3} />
+          <Route path='/home' component={Home} />
           <Route
             render={() => (
               <Redirect
@@ -31,11 +31,11 @@ function App() {
         </Router>
       </main>
       <footer>
-        <span role="img" aria-label="cactus">
+        <span role='img' aria-label='cactus'>
           🌵
         </span>
-        <span className="footer-text">Created by Aurimas Darguzis</span>
-        <span role="img" aria-label="cactus">
+        <span className='footer-text'>Created by Aurimas Darguzis</span>
+        <span role='img' aria-label='cactus'>
           🌵
         </span>
       </footer>
