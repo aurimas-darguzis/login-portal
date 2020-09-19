@@ -64,7 +64,7 @@ export default function LoginForm({ history }) {
             name='month'
             aria-required='true'
             aria-labelledby='month'
-            aria-invalid={errors.day ? "true" : "false"}
+            aria-invalid={errors.month ? "true" : "false"}
             ref={register({
               required: "A month is requried",
               pattern: {
@@ -81,7 +81,7 @@ export default function LoginForm({ history }) {
             name='year'
             aria-required='true'
             aria-labelledby='year'
-            aria-invalid={errors.day ? "true" : "false"}
+            aria-invalid={errors.year ? "true" : "false"}
             ref={register({
               required: "A year is requried",
               maxLength: {
@@ -119,7 +119,7 @@ export default function LoginForm({ history }) {
         className='uppercase'
         aria-required='true'
         aria-labelledby='postcode'
-        aria-invalid={errors.lastName ? "true" : "false"}
+        aria-invalid={errors.postcode ? "true" : "false"}
         ref={register({
           required: "Post code is required",
           minLength: { value: 5, message: "Minimum 5 characters" },
