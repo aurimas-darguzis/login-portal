@@ -28,7 +28,7 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  border-width: 2px;
+  border-color: #241bff;
 }
 
 input[type="radio"] {
