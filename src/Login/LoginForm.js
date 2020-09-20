@@ -49,7 +49,7 @@ export default function LoginForm({ history }) {
             aria-labelledby='day'
             aria-invalid={errors.day ? "true" : "false"}
             ref={register({
-              required: "A day is requried",
+              required: "A day is required",
               pattern: {
                 value: calendarDayRegex,
                 message: "A day needs to be between 1 and 31",
@@ -68,7 +68,7 @@ export default function LoginForm({ history }) {
             aria-labelledby='month'
             aria-invalid={errors.month ? "true" : "false"}
             ref={register({
-              required: "A month is requried",
+              required: "A month is required",
               pattern: {
                 value: calendarMonthRegex,
                 message: "A month needs to be a number between 1 and 12",
@@ -86,7 +86,7 @@ export default function LoginForm({ history }) {
             aria-labelledby='year'
             aria-invalid={errors.year ? "true" : "false"}
             ref={register({
-              required: "A year is requried",
+              required: "A year is required",
               maxLength: {
                 value: 4,
                 message: "Please enter valid year",

@@ -15,9 +15,9 @@ describe("Login Form Validation", () => {
 
     expect(await screen.findAllByRole("alert")).toHaveLength(5);
     expect(screen.getByText("Last name is required")).toBeInTheDocument();
-    expect(screen.getByText("A day is requried")).toBeInTheDocument();
-    expect(screen.getByText("A month is requried")).toBeInTheDocument();
-    expect(screen.getByText("A year is requried")).toBeInTheDocument();
+    expect(screen.getByText("A day is required")).toBeInTheDocument();
+    expect(screen.getByText("A month is required")).toBeInTheDocument();
+    expect(screen.getByText("A year is required")).toBeInTheDocument();
     expect(screen.getByText("Post code is required")).toBeInTheDocument();
   });
 
