@@ -23,7 +23,7 @@ export default function LoginForm({ history }) {
         aria-labelledby='lastName'
         aria-invalid={errors.lastName ? "true" : "false"} // screen reader will say: "Lastname, edit, invalid entry. This is required"
         ref={register({
-          required: "Last name is required!",
+          required: "Last name is required",
           maxLength: {
             value: 50,
             message: "Maximum limit of characters exceeded",
@@ -43,6 +43,7 @@ export default function LoginForm({ history }) {
           <label htmlFor='day'>Day</label>
           <input
             type='text'
+            id='day'
             name='day'
             aria-required='true'
             aria-labelledby='day'
@@ -61,6 +62,7 @@ export default function LoginForm({ history }) {
           <label htmlFor='month'>Month</label>
           <input
             type='text'
+            id='month'
             name='month'
             aria-required='true'
             aria-labelledby='month'
@@ -78,6 +80,7 @@ export default function LoginForm({ history }) {
           <label htmlFor='year'>Year</label>
           <input
             type='text'
+            id='year'
             name='year'
             aria-required='true'
             aria-labelledby='year'
@@ -115,6 +118,7 @@ export default function LoginForm({ history }) {
       <label htmlFor='postcode'>Postcode</label>
       <input
         name='postcode'
+        id='postcode'
         type='text'
         className='uppercase'
         aria-required='true'
