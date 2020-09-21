@@ -4,7 +4,7 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  width: 45%;
+  width: 30%;
   flex-direction: column;
 }
 
